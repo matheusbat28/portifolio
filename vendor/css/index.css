@@ -10,6 +10,22 @@
 body {
     font-family: 'Raleway';
     font-size: 22px;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: #383636;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 22, 22);
 }
 
 header {
@@ -17,6 +33,7 @@ header {
     align-items: center;
     justify-self: center;
     position: fixed;
+    top: 0;
     flex-direction: column;
     width: 100vw;
     height: 20vh;
@@ -131,10 +148,55 @@ section {
 
 #texto-sobreMi div p {
     color: #fff;
-    width: 80%;
+    width: 95%;
     height: 100%;
     overflow-y: auto;
 }
+
+#texto-sobreMi div p::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: #383636;
+}
+
+#texto-sobreMi div p::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+
+#texto-sobreMi div p::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 22, 22);
+}
+
+
+#projeto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#carrocel-img {
+    width: 60rem;
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: auto;
+}
+
+#carrocel-img::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    /* A altura só é vista quando a rolagem é horizontal */
+}
+
+#carrocel-img::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
+}
+
+#carrocel-img::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
 
 @media (max-width: 800px) {
     #contato {
