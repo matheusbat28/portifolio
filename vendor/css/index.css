@@ -179,83 +179,39 @@ section {
 
 #projeto h1 {
     color: #fff;
+    margin-top: 12rem;
 }
 
-#campos-projetos {
+#conteiner-projeto {
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
     width: 80%;
-    height: 80%;
-    overflow-x: auto;
-    /* border: 3px solid #fff; */
+    height: 65%;
 }
 
-#campos-projetos::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-    background-color: transparent;
+#conteiner-projeto div {
+    display: flex;
+    overflow: auto;
+    margin-top: 2rem;
+    width: 50rem;
+    height: 30rem;
+    border: 2px solid #fff;
 }
 
-#campos-projetos::-webkit-scrollbar-track {
-    background: transparent;
-    padding: 2px;
-}
-
-#campos-projetos::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
-
-.estilo-projeto {
-    position: relative;
-    width: 35rem;
-    height: 25rem;
-    border: 3px solid #fff;
-    margin: 2rem;
-}
-
-.estilo-projeto a img {
+#conteiner-projeto div img {
     width: 100%;
     height: 100%;
+
 }
 
-#descricao-projeto {
-    display: none;
-}
-
-.estilo-projeto:hover #descricao-projeto {
+#formacao {
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-flow: row wrap;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 2rem 2rem 0 0;
-    transition: 2s ease-in-out;
-    overflow-x: auto;
 }
 
-#descricao-projeto::-webkit-scrollbar {
-    width: 3px;
-    height: 3px;
-    background-color: transparent;
-}
-
-#descricao-projeto::-webkit-scrollbar-track {
-    background: transparent;
-    padding: 2px;
-}
-
-#descricao-projeto::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
-
-
-#descricao-projeto p {
-    margin: 0 6%;
+#formacao h1 {
+    color: #fff;
+    margin-top: 12rem;
 }
 
 
@@ -271,6 +227,7 @@ section {
     #texto-sobreMi div p {
         font-size: 80%;
     }
+
 }
 
 @media (max-width: 700px) {
@@ -278,6 +235,8 @@ section {
     .estilo-projeto {
         width: 35rem;
     }
+
+
 }
 
 @media (max-width: 650px) {
@@ -285,6 +244,7 @@ section {
     .estilo-projeto {
         width: 30rem;
     }
+
 }
 
 
@@ -332,7 +292,23 @@ section {
         font-size: 80%;
     }
 
-    .estilo-projeto {
-        width: 22rem;
+    #sobreMi {
+        grid-template-areas: 'a a''b b';
+    }
+
+    #img-contatos {
+        margin-top: 10rem;
+    }
+
+    #projeto h1 {
+        margin-top: 10rem;
+    }
+
+    #formacao h1 {
+        margin-top: 10rem;
+    }
+
+    #conteiner-projeto div{
+        height: 25rem;
     }
 }
