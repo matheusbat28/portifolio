@@ -182,26 +182,46 @@ section {
     margin-top: 12rem;
 }
 
-#conteiner-projeto {
+#conteriner-carrocel {
+    position: relative;
+    overflow-x: auto;
+    height: 60%;
+    width: 60%;
+    border: 3px solid #A60303;
+}
+
+#setas-carrocel {
+    position: absolute;
     display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#setas-carrocel i {
+    cursor: pointer;
+    margin: 0.5rem;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    width: 80%;
-    height: 65%;
+    width: 4%;
+    height: 100%;
+    color: #fff;
 }
 
-#conteiner-projeto div {
+#itens-carrocel {
+    flex-flow: column wrap;
+    z-index: 1;
     display: flex;
-    overflow: auto;
-    margin-top: 2rem;
-    width: 50rem;
-    height: 30rem;
-    border: 2px solid #fff;
-}
-
-#conteiner-projeto div img {
     width: 100%;
     height: 100%;
+}
 
+#itens-carrocel img {
+    width: 100%;
+    height: 100%;
 }
 
 #formacao {
@@ -308,7 +328,4 @@ section {
         margin-top: 10rem;
     }
 
-    #conteiner-projeto div{
-        height: 25rem;
-    }
 }
