@@ -93,7 +93,7 @@ section {
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: 'a b''a b';
+    grid-template-areas: 'a b' 'a b';
 }
 
 #img-contatos {
@@ -121,9 +121,35 @@ section {
     height: 6rem;
 }
 
+#git:hover {
+    color: #000000;
+    transform: scale(1.5);
+}
+
+#linked:hover {
+    color: #2867b2;
+    transform: scale(1.5);
+}
+
+#what:hover {
+    color: #2db141;
+    transform: scale(1.5);
+}
+
+#instra:hover {
+    color: #db535c;
+    transform: scale(1.5);
+}
+
+#face:hover {
+    color: #1977f3;
+    transform: scale(1.5);
+}
+
 #contato a i {
     color: #fff;
     font-size: 2.8rem;
+    transition: transform .2s;
 }
 
 #texto-sobreMi {
@@ -182,66 +208,25 @@ section {
     margin-top: 5rem;
 }
 
-
-#carrocel {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 40%;
-    height: 50%;
-    border: 2px solid #fff;
-}
-
-.seta {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
+#conteiner-projeto {
     justify-content: center;
-    height: 100%;
-    width: 10%;
-    color: #fff;
-    font-size: 2.5rem;
-}
-
-#setas-conteiner {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 100%;
-    height: 50%;
-}
-
-#imagens {
-    display: flex;
-    align-items: center;
+    flex-flow: row wrap;
     overflow: auto;
-    justify-content: center;
-    flex-flow: column wrap;
-    width: 100%;
-    height: 100%;
 }
 
-#imagens a {
-    width: 100%;
-    height: 100%;
+#conteiner-projeto::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    background-color: #383636;
 }
 
-
-#imagens a img {
-    position: relative;
-    width: 100%;
-    height: 100%;
+#conteiner-projeto::-webkit-scrollbar-track {
+    background: transparent;
+    padding: 2px;
 }
 
-#imagens a img:hover~#descricao-img {
-    margin: 0 50%;
-    position: absolute;
-    display: flex;
-    width: 70%;
-    height: 20%;
-    background-color: #1b1a1a;
+#conteiner-projeto::-webkit-scrollbar-thumb {
+    background-color: rgb(22, 22, 22);
 }
 
 #formacao {
@@ -253,19 +238,6 @@ section {
     color: #fff;
     margin-top: 12rem;
 }
-
-@media (max-width: 1466px) {
-    #carrocel {
-        width: 45%;
-    }
-}
-
-@media (max-width: 900px) {
-    #carrocel {
-        width: 70%;
-    }
-}
-
 
 @media (max-width: 800px) {
     #contato {
@@ -299,14 +271,6 @@ section {
 
     #navBar nav {
         width: 70%;
-    }
-
-    .seta {
-        font-size: 1.9rem;
-    }
-
-    #carrocel {
-        width: 80%;
     }
 
 }
@@ -356,7 +320,7 @@ section {
     }
 
     #sobreMi {
-        grid-template-areas: 'a a''b b';
+        grid-template-areas: 'a a' 'b b';
     }
 
     #img-contatos {
@@ -365,16 +329,6 @@ section {
 
     #projeto h1 {
         margin-top: 4rem;
-    }
-
-    #carrocel {
-        height: 30%;
-        width: 90%;
-        margin-bottom: 15rem;
-    }
-
-    .seta {
-        font-size: 1.5rem;
     }
 
     #formacao h1 {
